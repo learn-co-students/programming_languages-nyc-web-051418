@@ -8,27 +8,27 @@ def reformat_languages(languages)
   
   
     languages.each do |type, data|
+      
+    binding.pry
       type_array << type  
       
-        data.each do |programming_language, type_with_value|
+  
+      data.each do |programming_language, type_with_value|
           
           new_hash[programming_language] = type_with_value
-          
-          
           new_hash[:style] = type_array
-        end #end data each
-      end #end languages.each
-
  
-    # languages.each do |type, data|
-      
-    #     type_array << type  
-    #     new_hash[:style] = type_array
+      end #end data each
         
-    # end #end languages each (second time)  
-      
+       
+          
+          
+     
+    end #end languages.each
+
+binding.pry
      new_hash
-     binding.pry
+     
 end #end method
 
 
