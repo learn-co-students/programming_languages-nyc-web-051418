@@ -7,13 +7,12 @@ def reformat_languages(languages)
     
     type_array = []
   
-    languages.each do |type, data|
+    languages.each do |style, data|
       
       
         data.each do |programming_language, type_with_value|
           
-          type_array << type 
-
+  
             type_with_value.each do |key, value|
                 
                 
@@ -22,15 +21,13 @@ def reformat_languages(languages)
                 
                 
                 new_hash[programming_language][:style] = []
-                new_hash[programming_language][:style] << type
+                new_hash[programming_language][:style] << style
                 
                 
                 if programming_language == :javascript
+                  #binding.pry
                   new_hash[programming_language][:style] << :oo
                 end
-                
-                
-                
             end
             
             
@@ -38,6 +35,7 @@ def reformat_languages(languages)
         end #end data each
         
         
+       
         
      
     end #end languages.each
