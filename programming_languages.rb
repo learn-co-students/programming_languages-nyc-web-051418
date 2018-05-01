@@ -24,7 +24,12 @@ def reformat_languages(languages)
                 new_hash[programming_language][:style] = []
                 new_hash[programming_language][:style] << type
                 
-                #binding.pry
+                
+                if programming_language == :javascript
+                  new_hash[programming_language][:style] << :oo
+                end
+                
+                
                 
             end
             
