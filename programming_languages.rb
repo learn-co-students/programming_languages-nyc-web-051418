@@ -4,54 +4,48 @@ require 'pry'
 def reformat_languages(languages)
  
     new_hash = {}
+    
     type_array = []
   
     languages.each do |type, data|
+      
+      
         data.each do |programming_language, type_with_value|
           
-          
+          type_array << type 
 
             type_with_value.each do |key, value|
                 
                 
-                type_array << type 
-                #new_hash[programming_language] = {key => value, :style => type_array }
-                new_hash[programming_language] = {key => value}
-          
+                
+                new_hash[programming_language] = {:type => value}
+                
+                
+                new_hash[programming_language][:style] = []
+                new_hash[programming_language][:style] << type
+                
+                #binding.pry
                 
             end
             
-            new_hash[programming_language] = {:style => type_array }
-        
-    binding.pry
+            
 
         end #end data each
         
+        
+        
      
     end #end languages.each
+    
     new_hash
+    #binding.pry
+   
 end #end method
 
 
 
 
 
-
-
-     
-          # new_hash[programming_language] = type_with_value
-          #   new_hash[:style] = type_array
-          
-          
-          # new_hash[big_key] = {
-          
-          # type_with_value.each do |key, value|
-            
-          #   new_hash[key] = value
-            
-          #   binding.pry
-            
-          # end
 
 
 
