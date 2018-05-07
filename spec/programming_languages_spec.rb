@@ -31,7 +31,6 @@ describe '#reformat_languages' do
         :javascript => {
           :type => "interpreted"
         }
-     
       }
     }
   }
